@@ -363,12 +363,12 @@ st.sidebar.header("🔧 Model Settings")
 
 # Try to load the heart disease model automatically
 if "heart_model" not in st.session_state:
-   heart_model, model_name = load_model(None)
-if heart_model:
+    heart_model, model_name = load_model(None)
+    if heart_model:
         st.session_state.heart_model = heart_model
         st.session_state.model_name = model_name
         st.sidebar.success(f"✅ Model loaded: {model_name}")
-else:
+    else:
         st.sidebar.warning("⚠️ Heart disease model not loaded")
 
 # Manual model loading option
@@ -674,4 +674,5 @@ elif app_mode == "❤️ Heart Disease Predictor":
 # -------------------------
 st.markdown("---")
 st.markdown("**Disclaimer:** This system is for educational purposes only and does not replace professional medical care. In emergencies, call your local emergency services immediately.")
+
 st.caption("🏥 HealthAI Suite - Intelligent Analytics for Patient Care | GUVI Final Project")
